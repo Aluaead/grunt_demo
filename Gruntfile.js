@@ -1,22 +1,22 @@
 module.exports = function(grunt) {
   grunt.initConfig({
-    less: {
-      development: {
-        files: {
-                    'css/layout.css': 'less/layout.less'
+    htmlhint: {
+      html: {
+        options: {
+          htmlhintrc: '.htmlhintrc'       
+        },
+        src: ['*.html']      
+      }
+                            
                 
-            
-        }             
-                     
-      }                 
-                       
     }
-                      
-            
+                              
+                
   });
-    grunt.loadNpmTasks('grunt-contrib-less');
 
-      grunt.registerTask('default', ['less']);
+      grunt.loadNpmTasks('grunt-htmlhint');
+
+      grunt.registerTask('default', ['htmlhint']);
 
 
 };
