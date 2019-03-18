@@ -1,18 +1,18 @@
-/* global Rectangle: true */
-$(function() {
-  var $width = $('#width'),
-      $height = $('#height'),
+$(function(){
+  var $width=$('#width'),
+      $height=$('#height'),
       $btnCal = $('#calculate'),
       $perimeter = $('#perimeter'),
       $area = $('#area');
-
   $btnCal.click(function(){
-    var w = $width.val(),
-        h = $height.val();
+    var w = Number($width.val()),
+        h = Number($height.val());
 
-    var r = new Rectangle(w, h);
+    var p = 2*(w+h),
+        a = w*h;
 
-    $perimeter.val(r.perimeter());
-    $area.val(r.area());
+    $perimeter.val(p);
+    $area.val(a);
   });
+
 });
