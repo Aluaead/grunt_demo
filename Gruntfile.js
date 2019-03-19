@@ -1,17 +1,20 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   grunt.initConfig({
-    less: {
-      development: {
+    uglify: {
+      release:{
         files: {
-          'css/layout.css': 'less/layout.less'
+           'dist/rectangle.js': './rectangle.js'
             
-        }             
-      }                 
+        }
+                     
+      }       
+                  
     }
-            
+              
   });
-  grunt.loadNpmTasks('grunt-contrib-less');
 
-  grunt.registerTask('default', ['less']);
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+
+      grunt.registerTask('default', ['uglify:release']);
 
 };
