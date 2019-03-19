@@ -1,22 +1,18 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   grunt.initConfig({
-    htmlhint: {
-      html: {
-        options: {
-          htmlhintrc: '.htmlhintrc'       
-        },
-        src: ['*.html']      
-      }
-                            
-                
-    }
-                              
+        imagemin: {                               
+          files: {
+                    expand: true,
+          src: ['images/*.{png,jpg,gif}'],
+                                 dest: 'dist/'
+                                       
+          }
+              }
                 
   });
 
-      grunt.loadNpmTasks('grunt-htmlhint');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
 
-      grunt.registerTask('default', ['htmlhint']);
-
+      grunt.registerTask('default', ['imagemin']);    
 
 };
