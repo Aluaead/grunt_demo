@@ -1,22 +1,22 @@
-module.exports = function(grunt) {
+module.exports = function(grunt){
   grunt.initConfig({
-    htmlhint: {
-      html: {
-        options: {
-          htmlhintrc: '.htmlhintrc'       
-        },
-        src: ['*.html']      
-      }
-                            
-                
-    }
-                              
-                
+    run: {
+      api: {
+        options: { wait: false  },
+        args: ['./app.js']  
+      }          
+    },
+  mochacli: {
+    options: {
+      reporter: 'spec',
+      bail: true    
+    },
+    all: ['test/*.js']                       
+  }
   });
 
-      grunt.loadNpmTasks('grunt-htmlhint');
-
-      grunt.registerTask('default', ['htmlhint']);
-
-
-};
+  grunt.loadNpmTasks('grunt-run');
+  grunt.loadNpmTasks('grunt-mocha-cli');
+  
+  grunt.registerTask('default', ['run', 'mochacli', 'stop:api']);
+}
