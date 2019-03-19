@@ -1,22 +1,16 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   grunt.initConfig({
-    htmlhint: {
-      html: {
-        options: {
-          htmlhintrc: '.htmlhintrc'       
-        },
-        src: ['*.html']      
+    concat: {
+      js: {
+        src: ['rectangle.js', 'calc.js'],
+        dest: 'dist/bundle.js'  
       }
-                            
-                
     }
-                              
-                
+              
   });
 
-      grunt.loadNpmTasks('grunt-htmlhint');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
-      grunt.registerTask('default', ['htmlhint']);
-
+  grunt.registerTask('default', ['concat']);
 
 };
