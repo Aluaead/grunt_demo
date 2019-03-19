@@ -1,1 +1,1 @@
-# grunt_demo
+# grunt-demo
