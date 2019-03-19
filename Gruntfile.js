@@ -3,20 +3,19 @@ module.exports = function(grunt) {
     htmlhint: {
       html: {
         options: {
-          htmlhintrc: '.htmlhintrc'       
+                    htmlhintrc: '.htmlhintrc'
+            
         },
-        src: ['*.html']      
+          src: ['*.html']
+          
       }
-                            
                 
     }
-                              
                 
   });
 
-      grunt.loadNpmTasks('grunt-htmlhint');
+    grunt.loadNpmTasks('grunt-htmlhint');
 
       grunt.registerTask('default', ['htmlhint']);
-
 
 };

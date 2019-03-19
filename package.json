@@ -1,24 +1,27 @@
 {
-  "name": "grunt_demo",
+  "name": "grunt-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "Gruntfile.js",
+  "main": "index.js",
   "dependencies": {
-    "grunt": "^1.0.3",
-    "grunt-contrib-less": "^2.0.0"
+    "grunt-contrib-less": "^2.0.0",
+    "grunt-less": "^0.1.7"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-htmlhint": "^0.9.13"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Aluaead/grunt_demo.git"
+    "url": "git+https://github.com/weijia0208/grunt-demo.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Aluaead/grunt_demo/issues"
+    "url": "https://github.com/weijia0208/grunt-demo/issues"
   },
-  "homepage": "https://github.com/Aluaead/grunt_demo#readme"
+  "homepage": "https://github.com/weijia0208/grunt-demo#readme"
 }
